@@ -1,4 +1,4 @@
-package Ch3Threads;
+package Ch3Threads.threadclass;
 
 import java.io.*;
 import java.security.*;
