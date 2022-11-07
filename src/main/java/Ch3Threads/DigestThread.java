@@ -16,6 +16,7 @@ public class DigestThread extends Thread {
   public void run() {
     try {
       //FileInputStream in = new FileInputStream(filename);
+      // Get input stream from resource folder
       InputStream in = getClass().getClassLoader().getResourceAsStream(filename);
       MessageDigest sha = MessageDigest.getInstance("SHA-256");
       DigestInputStream din = new DigestInputStream(in, sha);
