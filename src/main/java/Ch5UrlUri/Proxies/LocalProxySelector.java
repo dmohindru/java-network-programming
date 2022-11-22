@@ -16,7 +16,7 @@ public class LocalProxySelector extends ProxySelector {
       result.add(Proxy.NO_PROXY);
     } else {
       SocketAddress proxyAddress 
-          = new InetSocketAddress( "proxy.example.com", 8000);
+          = new InetSocketAddress( "https://www.proxysite.com/", 80);
       Proxy proxy = new Proxy(Proxy.Type.HTTP, proxyAddress);
       result.add(proxy);
     }
