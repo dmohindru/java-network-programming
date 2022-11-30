@@ -7,7 +7,9 @@ import java.io.*;
 
 public class Time {
   
-  private static final String HOSTNAME = "time.nist.gov";
+  //private static final String HOSTNAME = "time.nist.gov";
+  private static final String HOSTNAME = "localhost";
+  private static final int PORT = 3700;
 
   public static void main(String[] args) throws IOException, ParseException {
     Date d = Time.getDateFromNetwork();
@@ -38,7 +40,8 @@ public class Time {
     
     Socket socket = null;
     try {
-      socket = new Socket(HOSTNAME, 37);
+      //socket = new Socket(HOSTNAME, 37);
+      socket = new Socket(HOSTNAME, PORT);
       socket.setSoTimeout(15000);
 
       InputStream raw = socket.getInputStream();
